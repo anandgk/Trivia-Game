@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Trivia Game">
+    <meta name="author" content="Anand Gopalakrishnan">
+
+    <title>Trivia Game by Anand Gopalakrishnan</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet"> 
+
+</head>
+    <body>
+
+        <!-- Header -->
+        <header>
+            <!-- NO HEADER USED -->
+        </header>
+
+        <!-- Page Modals -->
+
+        <!-- Modal to display when page is first opened -->
+        <div class="modal fade" id="game-start-message" role="dialog" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title text-center">JAVASCRiPT</h4>
+                    </div>
+                    <div class="modal-body">
+                        <img src="assets/images/trivia1.jpeg" class="img-rounded" width="568px">
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn" id="btn-game-open" data-dismiss="modal">Click to Play</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal to display when game is over -->
+        <div class="modal fade" id="gameover-message" role="dialog" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title">GAME OVER</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2">
+                                    <img class="center-block" src="assets/images/trivia2.jpg" class="img-rounded" width="470px">
+                                </div><
+                            </div>
+                            <div class="row">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <p class="lead"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn reset" id="btn-game-close" data-dismiss="modal">Click to Play Again</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page Content -->
+        <div class="container">
+
+            <!-- Game Header -->
+            <div class="row">
+                <div class="col-lg-12 text-center header-padding">
+                    <div class="panel panel-default">
+                        <div class="panel-body user-header-style">
+                            JavaScript Trivia Game
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <!-- Question Number Display -->
+                <div class="col-lg-6">
+                    <div class="col-lg-5">
+                        <div class="panel panel-default">
+                            <div class="panel-body text-center no-of-questions">
+                                Questions: 1 to #
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Answer Time Left Display -->
+                <div class="col-lg-6">
+                    <div class="col-lg-offset-7 col-lg-5">
+                        <div class="panel panel-default">
+                            <div class="panel-body text-center time-left">
+                                Time Left: 20 Seconds
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Game Question Display  -->
+            <div class="row">
+                <div class="col-lg-offset-1 col-lg-10 text-center">
+                    <div class="panel panel-default">
+                        <div class="panel-body trivia-question">
+                            Trivia Question
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Choices Display -->
+            <div class="row">
+                <div class="col-lg-offset-4 col-lg-4 text-center">
+                    <div class="panel panel-default">
+                        <div class="panel-body choice-one choice-style" data-index="0">
+                            Answer Choice One
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-offset-4 col-lg-4 text-center">
+                    <div class="panel panel-default">
+                        <div class="panel-body choice-two choice-style" data-index="1">
+                            Answer Choice Two
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-offset-4 col-lg-4 text-center">
+                    <div class="panel panel-default">
+                        <div class="panel-body choice-three choice-style" data-index="2">
+                            Answer Choice Three
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-offset-4 col-lg-4 text-center">
+                    <div class="panel panel-default">
+                        <div class="panel-body choice-four choice-style" data-index="3">
+                            Answer Choice Four
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Display for Number of Questions not Answered -->
+            <div class="row">
+                <div class="col-lg-offset-3 col-lg-6 text-center missed-style">
+                    <div class="panel panel-default">
+                        <div class="panel-body total-missed">
+                            Total questions not answered: 0
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <!-- NO FOOTER USED -->
+        </footer>
+        
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="assets/js/bootstrap.min.js"></script>
+
+        <!-- User defined -->
+        <script src="assets/js/quiz.js"></script> <!-- Contains array of question objects -->
+        <script src="assets/js/triviagame.js"></script> <!-- Contains processing logic -->
+
+    </body>
+</html>

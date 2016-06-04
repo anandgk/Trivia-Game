@@ -1,0 +1,54 @@
+
+body {
+	background-image: url(../images/trivia3.jpg); 
+	background-repeat: no-repeat;
+}
+
+.header-padding	{
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+.missed-style	{
+	margin-top: 20px;
+}
+
+.user-header-style 	{
+	background-color: #000066;
+	color: #fff;
+	font-size: 25px;
+	letter-spacing: 15px;
+}
+
+.no-of-questions {
+	background-color: #008080;
+	color: #fff;
+	font-size: 15px;
+}
+
+.time-left {
+	background-color: #990000;
+	color: #fff;
+	font-size: 15px;
+}
+
+.trivia-question	{
+	background-color: #660099;
+	color: #fff;
+	font-size: 20px;
+}
+
+.total-missed {
+	background-color: #c71585;
+	color: #fff;
+	font-size: 17px;
+}
+
+.choice-one, .choice-two, .choice-three, .choice-four	{
+	font-size: 16px;
+	cursor: progress;
+}
+
+.modal-title {
+	letter-spacing: 12px;
+}
